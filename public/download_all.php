@@ -212,7 +212,7 @@ $files_list = scandir($file_path);
 //add the files
 foreach ($files_list as $file_to_zip) {
   //scandir list "." and ".." so we need to skip them
-  if ($file_to_zip != '.' && $file_to_zip != '..'  && $file_to_zip != 'tmp') {
+  if ($file_to_zip != '.' && $file_to_zip != '..'  && $file_to_zip != 'download_all.php') {
     $content = file_get_contents($file_path . $file_to_zip);
     //var_dump($file_to_zip);
     $z->addFile($content, $file_to_zip);
